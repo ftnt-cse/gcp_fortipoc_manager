@@ -3,6 +3,7 @@ It's a quick tool to manage FortiPOC instances (PODs) on GCP during workshops
 ## Quick start:
 - Download the script
 - Open it and set the FortiPOC password
+- Set the PODs base name (exp: if the pods are called: FortiGate-Workshop-2020q4-XX, use : POD_NAME="FortiGate-Workshop-2020q4-")
 - Configure gcloud cli on the machine where you will run the script
 
 Usage: ./gcp_fpoc_manager.sh [COMMAND] [SCOPE] [SUBCOMMAND] [ARGs]
@@ -35,18 +36,18 @@ Usage: ./gcp_fpoc_manager.sh [COMMAND] [SCOPE] [SUBCOMMAND] [ARGs]
 
 	Examples:
 	   - Get the status of all PODs between 1 and 45:
-	      ./pod_tools status 1-45
+	      ./gcp_fpoc_manager.sh status 1-45
 	   - Get the status of all PODs:
-	      ./pod_tools status all
+	      ./gcp_fpoc_manager status all
 	   - Start PODs 10 to 50:
-	      ./pod_tools start 10-50
+	      ./gcp_fpoc_manager start 10-50
 	   - Stop all pods
-	      ./pod_tools stop all 
+	      ./gcp_fpoc_manager stop all 
 	   - reset all PODs to initial state:
-	      ./pod_tools reset all 
+	      ./gcp_fpoc_manager reset all 
 	   - List VM IDs of pod 1
-	      ./pod_tools list_ids 1-1
+	      ./gcp_fpoc_manager list_ids 1-1
 	   - Turn on VMs with IDs: 3,4,5 on PODs 10 to 30
-	      ./pod_tools vm 10-30 poweron 3,4,5
+	      ./gcp_fpoc_manager vm 10-30 poweron 3,4,5
 	   - Turn off VMs with IDs: 1,2,3,4 on all PODs
-	      ./pod_tools vm all poweron 1,2,3,4
+	      ./gcp_fpoc_manager vm all poweron 1,2,3,4
