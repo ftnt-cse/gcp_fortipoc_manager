@@ -5,7 +5,7 @@ It's a quick tool to manage FortiPOC instances (PODs) on GCP during workshops
 - Open it and set the FortiPOC password
 - Configure gcloud cli on the machine where you will run the script
 
-Usage: $0 COMMAND SCOPE SUBCOMMAND ARGs:
+Usage: ./gcp_fpoc_manager.sh COMMAND SCOPE SUBCOMMAND ARGs:
 
 	COMMAND list:
 	   - status: Displays the status of the FortiPOC PODs
